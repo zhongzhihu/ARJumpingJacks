@@ -34,6 +34,8 @@ struct ContentView: View {
                 ZStack {
                     CameraPreviewView(session: cameraManager.session)
                         .ignoresSafeArea()
+                    PoseOverlayView(pose: model.pose)
+                        .ignoresSafeArea()
                     debugOverlay
                 }
             }
